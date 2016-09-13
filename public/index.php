@@ -38,26 +38,25 @@ require("../includes/config.php");
     </div>
     <div class="collapse navbar-collapse" id="navb1">
       <div class="col-lg-3">
-      <div class="navbar-form navbar-left">
-       
+      <form class="navbar-form navbar-left">
+       <div class="form-group">
       <input type="text" placeholder="Search" class="form-control" id="typeahead" data-provide="typeahead">
           </div>
+		  </form>
         </div>
+       <div class="col-lg-4">
       </div>
-      <div class="col-lg-6">
-      </div>
-      <div class="col-lg-1">
+      <div class="col-lg-2">
       <div class="nav navbar-right">
         <a class="navbar-brand" href="#newmod">New Model</a>
         </div>
       </div>
-      <div class="col-lg-1">
+      <div class="col-lg-2">
       <div class="nav navbar-right">
         <a class="navbar-brand" href="https://budde.ws/logout.php"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> LOGOUT</a>
         </div>
       </div>
     </div>
-  </div>
 </nav>
 <div class="jumbotron jumbotron-0">
   <div class="container-fluid">
