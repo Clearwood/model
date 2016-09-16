@@ -25,6 +25,5 @@
     }
 	header("Content-type: application/json");	
 	print(json_encode($myArray, JSON_PRETTY_PRINT));
-	}
 	mysqli_close($connection);
     // output places as JSON (pretty-printed for debugging convenience)
