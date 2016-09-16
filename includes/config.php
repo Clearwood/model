@@ -4,7 +4,7 @@ if (!in_array($_SERVER["PHP_SELF"], ["/login.php", "/logout.php", "/register.php
     {   
         if (empty($_SESSION["id"]))
         {
-            redirect("login.php");
+            redirect("https://budde.ws/login.php");
         }
     }
    /**
@@ -25,4 +25,3 @@ if (!in_array($_SERVER["PHP_SELF"], ["/login.php", "/logout.php", "/register.php
         header("Location: {$location}");
         exit;
     }
-?>

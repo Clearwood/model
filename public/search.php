@@ -21,9 +21,9 @@ require("../includes/config.php");
 		$result=mysqli_stmt_get_result($stmt);
 		while($row=mysqli_fetch_assoc($result)){
 		$myArray[]=$row;
-		mysqli_stmt_close($stmt);
+
 	}
-		
+        mysqli_stmt_close($stmt);
 	}
 	}
 	else{
@@ -34,11 +34,10 @@ require("../includes/config.php");
 		$result=mysqli_stmt_get_result($stmt);
 		while($row=mysqli_fetch_assoc($result)){
 		$myArray[]=$row;
-		mysqli_stmt_close($stmt);
+
 	}
-		
+            mysqli_stmt_close($stmt);
 	}
 	}
 	header("Content-type: application/json");	
 	print(json_encode($myArray, JSON_PRETTY_PRINT));
-?>
