@@ -67,9 +67,7 @@ $(document).ready(function () {
                         console.log(errorThrown.toString());
                     });
                     */
-            }
-
-        })
+            })
     .on("typeahead:selected", function (eventObject, suggestion, name) {
         detail_id(suggestion.id);
     });
