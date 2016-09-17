@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="budde.ws">
+  <component name="PublishConfigData" serverName="budde.ws" uploadOnCheckin="c04ee318-0daa-4f97-9819-cfd90a9f7e9e">
     <serverData>
       <paths name="budde.ws">
         <serverdata>
@@ -10,5 +10,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="budde.ws" />
   </component>
 </project>

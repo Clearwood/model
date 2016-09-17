@@ -29,14 +29,27 @@ $(document).ready(function () {
             minLength: 1
         },
         {
-            source: search,
             templates: {
                 empty: "no models found yet",
                 suggestion: _.template("<p id=\"sug\"><b><%- full_name %>,</b>  <a id=\"model_id_type\"> <%- id %></a></p>")
+            },
+            source: function (query, process) {
+                var parameters = {
+                    query: query
+                };
+                return $.getJSON("https://budde.ws/search.php", parameters)
+                    .done(function (data) {
+                        return data;
+                    })
+                    .fail(function (jqXHR, textStatus, errorThrown) {
+
+                        // log error to browser's console
+                        console.log(errorThrown.toString());
+                    });
             }
 
-        });
-    $('#typeahead').on("typeahead:selected", function (eventObject, suggestion, name) {
+        })
+    .on("typeahead:selected", function (eventObject, suggestion, name) {
         detail_id(suggestion.id);
     });
 });
@@ -46,7 +59,7 @@ function search(query, cb) {
         query: query
     };
     $.getJSON("search.php", parameters)
-        .done(function (data, textStatus, jqXHR) {
+        .done(function (data) {
 
             /*
              console.log(query);
@@ -77,7 +90,7 @@ function detail_id(id_q) {
     };
     //noinspection JSUnresolvedFunction
     $.getJSON("https://budde.ws/model.php", parameters)
-        .done(function (data, textStatus, jqXHR) {
+        .done(function (data) {
             $("name").innerHTML = data[0].first_name + " " + data[0].last_name;
             $("age2").innerHTML = "age: " + data[0].age;
             var path = "https://budde.ws/uploads/" + data[0].file;
