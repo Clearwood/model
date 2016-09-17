@@ -34,6 +34,7 @@ $(document).ready(function () {
                 suggestion: _.template("<p id=\"sug\"><b><%- full_name %>,</b>  <a id=\"model_id_type\"> <%- id %></a></p>")
             },
             source: function (query, process) {
+                console.log(query);
                 return $.get('https://budde.ws/search.php', { query: query }, function (data) {
                     return process(data); //if JSON is [ "options" : { ...}
                     console.log("data");
