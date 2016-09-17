@@ -38,7 +38,7 @@ $(document).ready(function () {
                     query: query
                 };
                 console.log(query);
-                return $.getJSON("https://budde.ws/search.php", parameters)
+                $.getJSON("https://budde.ws/search.php", parameters)
                     .done(function (data) {
                         return data;
                         console.log(data);
