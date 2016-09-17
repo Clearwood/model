@@ -1,4 +1,5 @@
 <?php
+require_once("../includes/config.php");
 /**
  * Created by PhpStorm.
  * User: Keno

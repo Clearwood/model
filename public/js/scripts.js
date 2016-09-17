@@ -21,6 +21,12 @@ $(document).ready(function () {
             elements[i].style.display = "block";
         }
     });
+    var users= new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.obj.whitespace("username"),
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        remote: 'https://budde.ws/search.php?query=%QUERY'
+    });
+    users.initialize();
     $('#typeahead').typeahead(
         {
             hint: true,
@@ -29,10 +35,16 @@ $(document).ready(function () {
             minLength: 1
         },
         {
+            /*
             templates: {
                 empty: "no models found yet",
                 suggestion: _.template("<p id=\"sug\"><b><%- full_name %>,</b>  <a id=\"model_id_type\"> <%- id %></a></p>")
             },
+            */
+            name: 'users',
+            displayKey: 'full_name',
+            source: users.ttAdapter()
+            /*
             source: function (query, process) {
                 console.log(query);
                 return $.get('https://budde.ws/search.php', { query: query }, function (data) {
@@ -40,7 +52,6 @@ $(document).ready(function () {
                     console.log("data");
                     console.log(data);
                 });
-                /*
                 var parameters = {
                     query: query
                 };

@@ -34,10 +34,10 @@
 			<form action="https://budde.ws/login.php" method="post">
     <fieldset>
         <div class="form-group">
-            <input autocomplete="off" id="username" autofocus class="form-control" name="username" placeholder="Username" type="text"/>
+            <input autocomplete="off" id="username" autofocus class="form-control" name="username" placeholder="Username" type="text" required/>
         </div>
         <div class="form-group">
-            <input class="form-control" id="password" name="password" placeholder="Password" type="password"/>
+            <input class="form-control" id="password" name="password" placeholder="Password" type="password" required/>
         </div>
         <div class="form-group">
             <button class="btn btn-default" type="submit">
@@ -52,7 +52,7 @@
 <br></br>
         </div>
 <?php
-require("../includes/config.php");
+require_once("../includes/config.php");
 	echo "
 	<script>
 	var user= document.getElementById(\"username\");
@@ -62,25 +62,6 @@ require("../includes/config.php");
 	</script>
 	";
 if($_SERVER["REQUEST_METHOD"]=="POST"){
-	if (empty($_POST["username"]))
-        {
-			echo "<script> 
-			$(document).ready(function({
-			$(user).attr(\"placeholder\", \"Please enter an username\");
-			$(user).addClass(\"form-control-danger\");
-			}));
-			</script>";
-		}
-	if (empty($_POST["password"]))
-        {
-			echo "<script> 
-			$(document).ready(function({
-			$(use2).attr(\"placeholder\", \"Please enter an password\");
-			$(use2).addClass(\"form-control-danger\");
-			}));
-			</script>";
-		}
-	else{
 
 //enables sql connection
 	$host = "127.0.0.1";
@@ -122,7 +103,6 @@ else{
 	}
 	}
 	mysqli_close($connection);
-}
 }
 
 	   

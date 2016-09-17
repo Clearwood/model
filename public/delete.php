@@ -1,5 +1,5 @@
 <?php
-require("../includes/config.php");
+require_once("../includes/config.php");
 $host = "127.0.0.1";
 $password = "Pxoq007^";
 $username = "user";

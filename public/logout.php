@@ -1,5 +1,5 @@
 		<?php		
-		require("../includes/config.php");
+		require_once("../includes/config.php");
 		// unset any session variables
         $_SESSION = [];
 
@@ -12,4 +12,3 @@
         // destroy session
         session_destroy();
 		redirect("/");
-		?>

@@ -40,12 +40,10 @@ require_once("../includes/config.php");
         </div>
         <div class="collapse navbar-collapse" id="navb1">
             <div class="col-lg-3">
-                <form class="navbar-form navbar-left">
                     <div class="form-group">
                         <input type="text" placeholder="Search" class="form-control" id="typeahead"
                                data-provide="typeahead">
                     </div>
-                </form>
             </div>
             <div class="col-lg-4">
             </div>
