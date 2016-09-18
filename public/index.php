@@ -185,7 +185,7 @@ require_once("../includes/config.php");
         </div>
         <div class="container-fluid">
             <div class="col-xs-12 edit">
-
+                <button class="btn btn-default btn-block" type="submit">UPDATE</button>
             </div>
             <div class="col-lg-11 descr">
             </div>
