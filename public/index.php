@@ -40,7 +40,7 @@ require_once("../includes/config.php");
         </div>
         <div class="collapse navbar-collapse" id="navb1">
             <div class="col-lg-3">
-                    <form class="form-inline" role="form">
+                    <form class="navbar-form navbar-left" role="form">
                         <div class="form-group">
                         <label class="sr-only" for="typeahead">full name, id</label>
                         <input type="text" placeholder="Search" class="form-control" id="typeahead">
@@ -141,7 +141,6 @@ require_once("../includes/config.php");
                     print("<td ><span class=\"glyphicon glyphicon-remove del\" aria-hidden=\"true\"></span></td>");
                     print("</tr>");
                 }
-                //closing sql connection
                 mysqli_close($connection);
                 ?>
             </table>

@@ -56,20 +56,6 @@ function search(query, cb) {
     };
     $.getJSON("search.php", parameters)
         .done(function (data) {
-
-            /*
-             console.log(query);
-             console.log (cb);
-             console.log(data);
-
-             var newData = [];
-             $.each(data, function(){
-
-             newData.push(this.full_name);
-             newData.push(this.id);
-             });
-             console.log(newData);
-             */
             // call typeahead's callback
             cb(data);
         })
