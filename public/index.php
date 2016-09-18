@@ -194,7 +194,7 @@ require_once("../includes/config.php");
         </div>
         <div class="col-lg-3">
             <div class="input-group">
-                <label for="age2">Male</label>
+                <span class="input-group-addon">Male</span>
                 <input type="text" class="form-control edit" id="age2" required/>
             </div>
 
