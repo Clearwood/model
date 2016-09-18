@@ -57,14 +57,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 mysqli_stmt_close($stmt);
             }
             redirect("https://budde.ws");
-        } else {
-            if ($stmt = mysqli_prepare($connection, "UPDATE `models` SET age=? WHERE id=?")) {
-                mysqli_stmt_bind_param($stmt, "isi", $age, $id);
-                mysqli_stmt_execute($stmt);
-                mysqli_stmt_close($stmt);
-            }
-            redirect("https://budde.ws");
         }
+    } else {
+        if ($stmt = mysqli_prepare($connection, "UPDATE `models` SET age=? WHERE id=?")) {
+            mysqli_stmt_bind_param($stmt, "isi", $age, $id);
+            mysqli_stmt_execute($stmt);
+            mysqli_stmt_close($stmt);
+        }
+        redirect("https://budde.ws");
     }
 }
 else{
