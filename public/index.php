@@ -203,7 +203,7 @@ require_once("../includes/config.php");
             <h2 class="descr" id="age3">Age: 24</h2>
             <div class="input-group edit">
                 <span class="input-group-addon">Age</span>
-                <input type="text" class="form-control" id="age2" required/>
+                <input type="text" class="form-control" id="age2" name="age" required/>
             </div>
 
 
