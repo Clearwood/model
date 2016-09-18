@@ -88,7 +88,7 @@ require_once("../includes/config.php");
 
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $file_name = null;
-                    if (isset($_FILES['image'])) {
+                    if (isset($_FILES['image'])&& !empty( $_FILES["image"]["name"] )) {
                         $errors = array();
                         $date1 = getdate();
                         $date = $date1["mon"] . "_" . $date1["mday"] . "_" . $date1["year"] . "_" . $date1["hours"] . "_" . $date1["minutes"] . "_" . $date1["seconds"];

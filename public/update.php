@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = ($_POST["id"]);
     $file_name = null;
     $age = intval($_POST["age"]);
-    if (isset($_FILES['image'])) {
+    if (isset($_FILES['image'])&& !empty( $_FILES["image"]["name"] )) {
         if ($stmt = mysqli_prepare($connection, "SELECT * FROM models WHERE id = ?")) {
             mysqli_stmt_bind_param($stmt, "i", $id);
             mysqli_stmt_execute($stmt);
