@@ -20,7 +20,7 @@ require_once("../includes/config.php");
     <!-- http://getbootstrap.com/ -->
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/underscore-min.js"></script>
-    <script src="/js/typeahead.bundle.js"></script>
+    <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
     <script src="/js/scripts.js"></script>
 </head>
 
