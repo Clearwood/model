@@ -113,7 +113,7 @@ function detail_id(id_q) {
             $("#name").html(data[0].full_name);
             console.log(data[0].full_name);
             var age=data[0].age;
-            $("#age3").html(age);
+            $("#age3").html("Age: "+age);
             $("#age2").attr("value", age);
             var path = "https://budde.ws/uploads/" + data[0].file;
             $("#profile").attr("src", path);
