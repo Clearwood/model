@@ -53,14 +53,6 @@
         </div>
 <?php
 require_once("../includes/config.php");
-	echo "
-	<script>
-	var user= document.getElementById(\"username\");
-	var use2= document.getElementById(\"password\");
-	use2.className=\"form-control\";
-	user.className=\"form-control\";
-	</script>
-	";
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 
 //enables sql connection

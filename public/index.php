@@ -25,7 +25,7 @@ require_once("../includes/config.php");
 </head>
 
 <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" id="nav">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navb1"
@@ -40,7 +40,7 @@ require_once("../includes/config.php");
         </div>
         <div class="collapse navbar-collapse" id="navb1">
             <div class="col-lg-3">
-                    <form class="navbar-form navbar-left" role="form">
+                    <form class="form-inline" role="form">
                         <div class="form-group">
                         <label class="sr-only" for="typeahead">full name, id</label>
                         <input type="text" placeholder="Search" class="form-control" id="typeahead">
@@ -66,7 +66,7 @@ require_once("../includes/config.php");
 <div class="jumbotron jumbotron-0">
     <div class="container-fluid">
         <div class="table-responsive">
-            <table class="table" id="table">
+            <table class="table">
                 <thead>
                 <tr>
                     <th>ID</th>
@@ -212,7 +212,7 @@ require_once("../includes/config.php");
         </form>
     </div>
     <div class="container-fluid">
-        <a class="btn btn-block" href="#table">
+        <a class="btn btn-block" href="#nav">
             <span class="glyphicon glyphicon-menu-up"></span>
             GO BACK TO THE TOP
         </a>
