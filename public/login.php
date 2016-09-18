@@ -10,7 +10,7 @@
 
         <link href="/css/styles.css" rel="stylesheet"/>
             <title>models DB</title>
-
+        <link rel="icon" href="https://budde.ws/uploads/favicon.png">
         <!-- https://jquery.com/ -->
         <script src="/js/jquery-3.1.0.min.js"></script>
 

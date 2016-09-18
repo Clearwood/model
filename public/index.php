@@ -40,9 +40,11 @@ require_once("../includes/config.php");
         </div>
         <div class="collapse navbar-collapse" id="navb1">
             <div class="col-lg-3">
-                    <form class="navbar-form navbar-left">
+                    <form class="navbar-form navbar-left" role="form">
+                        <div class="form-group">
                         <label class="sr-only" for="typeahead">full name, id</label>
-                        <input type="text" placeholder="Search" class="form-control typeahead" id="typeahead">
+                        <input type="text" placeholder="Search" class="form-control" id="typeahead">
+                            </div>
                     </form>
             </div>
             <div class="col-lg-4">
@@ -64,7 +66,7 @@ require_once("../includes/config.php");
 <div class="jumbotron jumbotron-0">
     <div class="container-fluid">
         <div class="table-responsive">
-            <table class="table">
+            <table class="table" id="table">
                 <thead>
                 <tr>
                     <th>ID</th>
@@ -180,7 +182,7 @@ require_once("../includes/config.php");
             <input type="file" name="image" id="imgload" style="display:none;"/>
             <input type="text" id="id_form" name="id" style="display:none;" required/>
         <div class="page-header">
-            <h1 id="name">Model</h1>
+            <h1 id="name">Jane Doe</h1>
         </div>
         <div class="container-fluid">
             <div class="col-xs-12 edit">
@@ -208,6 +210,12 @@ require_once("../includes/config.php");
 
         </div>
         </form>
+    </div>
+    <div class="container-fluid">
+        <a class="btn btn-block" href="#table">
+            <span class="glyphicon glyphicon-menu-up"></span>
+            GO BACK TO THE TOP
+        </a>
     </div>
 </div>
 <div class="container-fluid">

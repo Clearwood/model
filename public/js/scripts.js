@@ -1,3 +1,4 @@
+var file_show=0;
 $(document).ready(function () {
     $("a.modelid").on("click", function () {
         console.log("click");
@@ -16,10 +17,12 @@ $(document).ready(function () {
     $("#edit").on("click", function () {
         $(".descr").hide();
         $(".edit").show();
-        console.log("edit");
+        file_show=1;
     });
     $("#profile").on("click",function(){
-       $("#imgload").trigger("click");
+        if(file_show==1) {
+            $("#imgload").trigger("click");
+        }
     });
     var users= new Bloodhound({
         datumTokenizer: Bloodhound.tokenizers.obj.whitespace("username"),
@@ -35,15 +38,11 @@ $(document).ready(function () {
             minLength: 1
         },
         {
-            /*
+            source: search,
             templates: {
-                empty: "no models found yet",
+             empty: "no models found yet",
                 suggestion: _.template("<p id=\"sug\"><b><%- full_name %>,</b>  <a id=\"model_id_type\"> <%- id %></a></p>")
-            },
-            */
-            name: 'users',
-            displayKey: 'full_name',
-            source: users.ttAdapter()
+             }
             /*
             source: function (query, process) {
                 console.log(query);
@@ -71,6 +70,7 @@ $(document).ready(function () {
     .on("typeahead:selected", function (eventObject, suggestion, name) {
         detail_id(suggestion.id);
     });
+    $("#model").hide();
 });
 function search(query, cb) {
     // get persons matching query (ajax)
@@ -113,12 +113,14 @@ function detail_id(id_q) {
             $("#name").html(data[0].full_name);
             console.log(data[0].full_name);
             var age=data[0].age;
-            $("#age3").html("Age: "+age);
+            $("#age3").html("age: "+age);
             $("#age2").attr("value", age);
             $("#id_form").attr("value", data[0].id);
             var path = "https://budde.ws/uploads/" + data[0].file;
             $("#profile").attr("src", path);
+            $("#model").show();
             window.location = "#model";
+
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
 
