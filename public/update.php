@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = ($_POST["id"]);
     $file_name = null;
     $age = intval($_POST["age"]);
-    if (isset($_POST["file"])) {
+    if (isset($_FILES['image'])) {
         if ($stmt = mysqli_prepare($connection, "SELECT * FROM models WHERE id = ?")) {
             mysqli_stmt_bind_param($stmt, "i", $id);
             mysqli_stmt_execute($stmt);
@@ -24,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             unlink($file);
             mysqli_stmt_close($stmt);
         }
-        if (isset($_FILES['image'])) {
             $errors = array();
             $date1 = getdate();
             $date = $date1["mon"] . "_" . $date1["mday"] . "_" . $date1["year"] . "_" . $date1["hours"] . "_" . $date1["minutes"] . "_" . $date1["seconds"];
@@ -57,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 mysqli_stmt_close($stmt);
             }
             redirect("https://budde.ws");
-        }
+
     } else {
         if ($stmt = mysqli_prepare($connection, "UPDATE `models` SET age=? WHERE id=?")) {
             mysqli_stmt_bind_param($stmt, "ii", $age, $id);

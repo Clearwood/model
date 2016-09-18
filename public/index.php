@@ -200,7 +200,7 @@ require_once("../includes/config.php");
                 class="img-responisve img-fluid img-thumbnail pull-xs-left" id="profile">
         </div>
         <div class="col-lg-3">
-            <h2 class="descr" id="age3">Age: 24</h2>
+            <h2 class="descr" id="age3">age: 24</h2>
             <div class="input-group edit">
                 <span class="input-group-addon">Age</span>
                 <input type="text" class="form-control" id="age2" name="age" required/>
