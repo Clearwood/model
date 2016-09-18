@@ -129,7 +129,7 @@ require_once("../includes/config.php");
                     }
                     redirect("https://budde.ws");
                 }
-                $result = mysqli_query($connection, "SELECT * FROM `models`");
+                $result = mysqli_query($connection, "SELECT * FROM `models` ORDER BY id ASC");
                 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                     print("<tr>");
                     print("<td ><a class=\"modelid\" href=\"#model\">" . $row["id"] . "</a></td>");
