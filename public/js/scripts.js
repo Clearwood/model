@@ -112,6 +112,7 @@ function detail_id(id_q) {
     $.getJSON("https://budde.ws/model.php", parameters)
         .done(function (data) {
             $("name").html(data[0].full_name);
+            console.log(data[0].full_name);
             $("age2").attr("value", data[0].age);
             var path = "https://budde.ws/uploads/" + data[0].file;
             $("#profile").attr("src", path);
