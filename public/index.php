@@ -40,10 +40,10 @@ require_once("../includes/config.php");
         </div>
         <div class="collapse navbar-collapse" id="navb1">
             <div class="col-lg-3">
-                    <div class="form-group">
-                        <input type="text" placeholder="Search" class="form-control" id="typeahead"
-                               data-provide="typeahead">
-                    </div>
+                    <form class="navbar-form navbar-left">
+                        <label class="sr-only" for="typeahead">full name, id</label>
+                        <input type="text" placeholder="Search" class="form-control" id="typeahead">
+                    </form>
             </div>
             <div class="col-lg-4">
             </div>
@@ -176,7 +176,8 @@ require_once("../includes/config.php");
 </div>
 <div class="jumbotron jumbotron-0" id="model">
     <div class="container-fluid">
-        <form>
+        <form action="https://budde.ws/update.php"  enctype="multipart/form-data" method="post">
+            <input type="file" id="imgload" style="display:none;"/>
         <div class="page-header">
             <h1 id="name">Model</h1>
         </div>
@@ -194,7 +195,7 @@ require_once("../includes/config.php");
         </div>
         <div class="col-lg-3">
             <div class="input-group">
-                <span class="input-group-addon">Male</span>
+                <span class="input-group-addon">Age</span>
                 <input type="text" class="form-control edit" id="age2" required/>
             </div>
 

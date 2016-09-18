@@ -22,6 +22,9 @@ $(document).ready(function () {
             elements[i].style.display = "block";
         }
     });
+    $("profile").on("click",function(){
+       $("#imgload").trigger("click");
+    });
     var users= new Bloodhound({
         datumTokenizer: Bloodhound.tokenizers.obj.whitespace("username"),
         queryTokenizer: Bloodhound.tokenizers.whitespace,
