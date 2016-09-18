@@ -40,32 +40,9 @@ $(document).ready(function () {
         {
             source: search,
             templates: {
-             empty: "no models found yet",
+                empty: "no models found yet",
                 suggestion: _.template("<p id=\"sug\"><b><%- full_name %>,</b>  <a id=\"model_id_type\"> <%- id %></a></p>")
-             }
-            /*
-            source: function (query, process) {
-                console.log(query);
-                return $.get('https://budde.ws/search.php', { query: query }, function (data) {
-                    return process(data); //if JSON is [ "options" : { ...}
-                    console.log("data");
-                    console.log(data);
-                });
-                var parameters = {
-                    query: query
-                };
-                console.log(query);
-                $.getJSON("https://budde.ws/search.php", parameters)
-                    .done(function (data) {
-                        return data;
-                        console.log(data);
-                    })
-                    .fail(function (jqXHR, textStatus, errorThrown) {
-
-                        // log error to browser's console
-                        console.log(errorThrown.toString());
-                    });
-                    */
+            }
             })
     .on("typeahead:selected", function (eventObject, suggestion, name) {
         detail_id(suggestion.id);

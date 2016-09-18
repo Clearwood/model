@@ -141,6 +141,7 @@ require_once("../includes/config.php");
                     print("<td ><span class=\"glyphicon glyphicon-remove del\" aria-hidden=\"true\"></span></td>");
                     print("</tr>");
                 }
+                //closing sql connection
                 mysqli_close($connection);
                 ?>
             </table>
