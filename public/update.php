@@ -10,9 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!$connection) {
         die("Connection failed: " . mysqli_connect_error());
     }
-    $id = $_POST["id"];
+    $id = ($_POST["id"]);
     $file_name = null;
-    $age = $_POST["age"];
+    $age = intval($_POST["age"]);
     if (isset($_POST["file"])) {
         if ($stmt = mysqli_prepare($connection, "SELECT * FROM models WHERE id = ?")) {
             mysqli_stmt_bind_param($stmt, "i", $id);
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } else {
         if ($stmt = mysqli_prepare($connection, "UPDATE `models` SET age=? WHERE id=?")) {
-            mysqli_stmt_bind_param($stmt, "isi", $age, $id);
+            mysqli_stmt_bind_param($stmt, "ii", $age, $id);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
         }
