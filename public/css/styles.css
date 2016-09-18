@@ -17,6 +17,26 @@
     background-size: cover;
     overflow: hidden;
 }
+#typeahead
+{
+    /* override typeahead.js's transparent background */
+    background-color: #ffffff !important;
+
+    /* text box's width */
+    width: 300px;
+}
+#sug{
+    font-family: "Raleway", 300;
+}
+#model_id_type{
+    font-family: "Raleway", 200 !important;
+    color: grey;
+    font-size: small;
+}
+@font-face{
+    font-family: Raleway;
+    src: url("https://fonts.googleapis.com/css?family=Raleway:200,300,400");
+}
 #head{
   text-align:center;
 }
