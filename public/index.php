@@ -191,10 +191,13 @@ require_once("../includes/config.php");
                 src="https://www.runwaylive.com/wp-content/uploads/2016/06/6983226-beauty-barbara-palvin-hungarian-fashion-model.jpg"
                 class="img-responisve img-fluid img-thumbnail pull-xs-left" id="profile">
         </div>
-        <div class="col-lg-3">
-            <h2 id="age2"> age: 24</h2>
+        <div class="col-lg-1">
+            <h2 > age: </h2>
+
+        </div>
+        <div class="col-lg-2">
             <form>
-                <input type="text" class="form-control edit"/>
+                <input type="text" class="form-control edit" id="age2" required/>
             </form>
         </div>
     </div>

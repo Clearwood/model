@@ -1,7 +1,8 @@
 $(document).ready(function () {
-    $("a.modelid").on("click", function (event) {
+    $("a.modelid").on("click", function () {
         console.log("click");
-        detail_id(event.currentTarget.innerHTML);
+        var html1 = $(this).html();
+        detail_id(html1);
     });
     $("span.del").on("click", function (event) {
         var parent = event.currentTarget.parentNode;
@@ -110,8 +111,8 @@ function detail_id(id_q) {
     //noinspection JSUnresolvedFunction
     $.getJSON("https://budde.ws/model.php", parameters)
         .done(function (data) {
-            $("name").innerHTML = data[0].first_name + " " + data[0].last_name;
-            $("age2").innerHTML = "age: " + data[0].age;
+            $("name").html(data[0].full_name);
+            $("age2").attr("value", data[0].age);
             var path = "https://budde.ws/uploads/" + data[0].file;
             $("#profile").attr("src", path);
             window.location = "#model";
