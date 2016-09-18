@@ -12,15 +12,11 @@ $(document).ready(function () {
             post("https://budde.ws/delete.php", {id: id2});
         }
     });
-    $("#edit").on("click", function (event) {
-        elements.getElementsByClassName("descr");
-        for (var i = 0; i < elements.length; i++) {
-            elements[i].style.display = "none";
-        }
-        elements.getElementsByClassName("edit");
-        for (var i = 0; i < elements.length; i++) {
-            elements[i].style.display = "block";
-        }
+    $(".edit").hide();
+    $("#edit").on("click", function () {
+        $(".descr").hide();
+        $(".edit").show();
+        console.log("edit");
     });
     $("#profile").on("click",function(){
        $("#imgload").trigger("click");
@@ -116,11 +112,12 @@ function detail_id(id_q) {
         .done(function (data) {
             $("#name").html(data[0].full_name);
             console.log(data[0].full_name);
-            $("#age2").attr("value", data[0].age);
+            var age=data[0].age;
+            $("#age3").html(age);
+            $("#age2").attr("value", age);
             var path = "https://budde.ws/uploads/" + data[0].file;
             $("#profile").attr("src", path);
             window.location = "#model";
-            // call typeahead's callback with search results (i.e., places)
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
 

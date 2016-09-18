@@ -127,7 +127,7 @@ require_once("../includes/config.php");
                         mysqli_stmt_execute($stmt);
                         mysqli_stmt_close($stmt);
                     }
-
+                    redirect("https://budde.ws");
                 }
                 $result = mysqli_query($connection, "SELECT * FROM `models`");
                 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -140,6 +140,7 @@ require_once("../includes/config.php");
                     print("</tr>");
                 }
                 mysqli_close($connection);
+
                 ?>
             </table>
         </div>
@@ -184,7 +185,7 @@ require_once("../includes/config.php");
         <div class="container-fluid">
             <div class="col-lg-11">
             </div>
-            <div class="col-lg-1">
+            <div class="col-lg-1" id="edit">
                 <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> EDIT
             </div>
         </div>
@@ -194,8 +195,9 @@ require_once("../includes/config.php");
                 class="img-responisve img-fluid img-thumbnail pull-xs-left" id="profile">
         </div>
         <div class="col-lg-3">
-            <div class="input-group">
-                <span class="input-group-addon">Age</span>
+            <h2 class="descr" id="age3">24</h2>
+            <div class="input-group edit">
+                <span class="input-group-addon edit">Age</span>
                 <input type="text" class="form-control edit" id="age2" required/>
             </div>
 
