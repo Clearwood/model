@@ -42,7 +42,7 @@ require_once("../includes/config.php");
             <div class="col-lg-3">
                     <form class="navbar-form navbar-left">
                         <label class="sr-only" for="typeahead">full name, id</label>
-                        <input type="text" placeholder="Search" class="form-control" id="typeahead">
+                        <input type="text" placeholder="Search" class="form-control typeahead" id="typeahead">
                     </form>
             </div>
             <div class="col-lg-4">
@@ -140,7 +140,6 @@ require_once("../includes/config.php");
                     print("</tr>");
                 }
                 mysqli_close($connection);
-
                 ?>
             </table>
         </div>
@@ -196,7 +195,7 @@ require_once("../includes/config.php");
         </div>
         <div class="col-lg-3">
             <img
-                src="https://www.runwaylive.com/wp-content/uploads/2016/06/6983226-beauty-barbara-palvin-hungarian-fashion-model.jpg"
+                src="https://budde.ws/uploads/woman.jpg"
                 class="img-responisve img-fluid img-thumbnail pull-xs-left" id="profile">
         </div>
         <div class="col-lg-3">
