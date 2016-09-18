@@ -194,7 +194,7 @@ require_once("../includes/config.php");
         <div class="col-lg-3">
             <h2 id="age2"> age: 24</h2>
             <form>
-                <input type="text" class="form-control edit" style="display:none;">
+                <input type="text" class="form-control edit"/>
             </form>
         </div>
     </div>
