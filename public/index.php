@@ -178,14 +178,18 @@ require_once("../includes/config.php");
 <div class="jumbotron jumbotron-0" id="model">
     <div class="container-fluid">
         <form action="https://budde.ws/update.php"  enctype="multipart/form-data" method="post">
-            <input type="file" id="imgload" style="display:none;"/>
+            <input type="file" name="image" id="imgload" style="display:none;"/>
+            <input type="text" id="id_form" name="id" style="display:none;" required/>
         <div class="page-header">
             <h1 id="name">Model</h1>
         </div>
         <div class="container-fluid">
-            <div class="col-lg-11">
+            <div class="col-xs-12 edit">
+
             </div>
-            <div class="col-lg-1" id="edit">
+            <div class="col-lg-11 descr">
+            </div>
+            <div class="col-lg-1 descr" id="edit">
                 <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> EDIT
             </div>
         </div>
