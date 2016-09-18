@@ -22,7 +22,7 @@ $(document).ready(function () {
             elements[i].style.display = "block";
         }
     });
-    $("profile").on("click",function(){
+    $("#profile").on("click",function(){
        $("#imgload").trigger("click");
     });
     var users= new Bloodhound({
