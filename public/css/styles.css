@@ -32,13 +32,14 @@
     font-family: Raleway;
     src: url("https://fonts.googleapis.com/css?family=Raleway:200,300,400");
 }
+
 #head{
   text-align:center;
 }
 #middle{
   text-align:center;
 }
-/*
+
 .navbar.navbar-custom {
     height: 50px;
     border-radius: 0;
@@ -81,7 +82,7 @@
     border: none;
     background: none;
 }
-//typeahead
+
 
 .navbar-custom .typeahead,
 .navbar-custom .tt-query,
@@ -151,7 +152,8 @@
         background: #f5f5f5;
     }
 }
-*/
+/*
 .tt-input-group {
     width: 100%;
 }
+*/
