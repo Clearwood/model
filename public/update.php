@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 mysqli_stmt_execute($stmt);
                 mysqli_stmt_close($stmt);
             }
-            redirect("https://budde.ws");
+            redirect("/");
 
     } else {
         if ($stmt = mysqli_prepare($connection, "UPDATE `models` SET age=? WHERE id=?")) {
@@ -63,11 +63,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
         }
-        redirect("https://budde.ws");
+        redirect("/");
     }
 }
 else{
-    redirect("https://budde.ws");
+    redirect("/");
 }
 /**
  * Created by PhpStorm.

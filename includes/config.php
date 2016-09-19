@@ -4,7 +4,7 @@ if (!in_array($_SERVER["PHP_SELF"], ["/login.php", "/logout.php", "/register.php
     {   
         if (empty($_SESSION["id"]))
         {
-            redirect("https://budde.ws/login.php");
+            redirect("/login.php");
         }
     }
    /**
@@ -25,3 +25,9 @@ if (!in_array($_SERVER["PHP_SELF"], ["/login.php", "/logout.php", "/register.php
         header("Location: {$location}");
         exit;
     }
+if(empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == "off"){
+    $redirect = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: ' . $redirect);
+    exit();
+}

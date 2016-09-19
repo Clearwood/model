@@ -10,7 +10,7 @@
 
         <link href="/css/styles.css" rel="stylesheet"/>
             <title>models DB</title>
-        <link rel="icon" href="https://budde.ws/uploads/favicon.png">
+        <link rel="icon" href="/uploads/favicon.png">
         <!-- https://jquery.com/ -->
         <script src="/js/jquery-3.1.0.min.js"></script>
 
@@ -28,10 +28,10 @@
 <div class="page-header" id="head">
       <h1 id="name">LOGIN</h1>
     </div>
-<br></br>
+<br>
 <div id="container-fluid">
             <div id="middle">
-			<form action="https://budde.ws/login.php" method="post">
+			<form action="/login.php" method="post">
     <fieldset>
         <div class="form-group">
             <input autocomplete="off" id="username" autofocus class="form-control" name="username" placeholder="Username" type="text" required/>
@@ -48,8 +48,8 @@
     </fieldset>
 </form>
 	</div>
-	<br></br>
-<br></br>
+	<br>
+<br>
         </div>
 <?php
 require_once("../includes/config.php");

@@ -58,7 +58,7 @@ require_once("../includes/config.php");
             </div>
             <div class="col-lg-2">
                 <div class="nav navbar-right">
-                    <a class="navbar-brand" href="https://budde.ws/logout.php"><span class="glyphicon glyphicon-log-out"
+                    <a class="navbar-brand" href="logout.php"><span class="glyphicon glyphicon-log-out"
                                                                                      aria-hidden="true"></span>
                         LOGOUT</a>
                 </div>
@@ -131,7 +131,7 @@ require_once("../includes/config.php");
                         mysqli_stmt_execute($stmt);
                         mysqli_stmt_close($stmt);
                     }
-                    redirect("https://budde.ws");
+                    redirect("/");
                 }
                 $result = mysqli_query($connection, "SELECT * FROM `models` ORDER BY id ASC");
                 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -154,7 +154,7 @@ require_once("../includes/config.php");
         <div class="page-header" id="newmod">
             <h1>New Model</h1>
         </div>
-        <form method="post" enctype="multipart/form-data" action="https://budde.ws/index.php">
+        <form method="post" enctype="multipart/form-data" action="/index.php">
             <div class="form-group">
                 <div class="row">
                     <div class="col-sm-3">
@@ -180,7 +180,7 @@ require_once("../includes/config.php");
 </div>
 <div class="jumbotron jumbotron-0" id="model">
     <div class="container-fluid">
-        <form action="https://budde.ws/update.php"  enctype="multipart/form-data" method="post">
+        <form action="/update.php"  enctype="multipart/form-data" method="post">
             <input type="file" name="image" id="imgload" style="display:none;"/>
             <input type="text" id="id_form" name="id" style="display:none;" required/>
         <div class="page-header">
@@ -199,7 +199,7 @@ require_once("../includes/config.php");
         </div>
         <div class="col-lg-3">
             <img
-                src="https://budde.ws/uploads/woman.jpg"
+                src="/uploads/woman.jpg"
                 class="img-responisve img-fluid img-thumbnail pull-xs-left" id="profile">
         </div>
         <div class="col-lg-3">
