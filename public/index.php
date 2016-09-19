@@ -12,6 +12,7 @@ require_once("../includes/config.php");
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css">
 
     <link href="/css/styles.css" rel="stylesheet"/>
+    <link href="/css/typeahead.css" rel="stylesheet"/>
     <title>model DB</title>
 
     <!-- https://jquery.com/ -->
@@ -40,15 +41,13 @@ require_once("../includes/config.php");
         </div>
         <div class="collapse navbar-collapse" id="navb1">
             <div class="col-lg-3">
-                    <form class="formSearch" role="search">
-                        <div class="form-group inner-addon right-addon">
-                            <span id="the-basics">
+                        <form class="navbar-form navbar-left" role="search">
+                        <div class="input-group tt-input-group">
+
                         <label class="sr-only" for="typeahead">full name, id</label>
                         <input type="text" placeholder="Search" class="form-control typeahead" id="typeahead">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </span>
                         </div>
-                    </form>
+                        </form>
             </div>
             <div class="col-lg-4">
             </div>
