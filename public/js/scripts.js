@@ -52,7 +52,7 @@ $(document).ready(function () {
 function search(query, cb) {
     // get persons matching query (ajax)
     var parameters = {
-        query: query
+        q: query
     };
     $.getJSON("search.php", parameters)
         .done(function (data) {

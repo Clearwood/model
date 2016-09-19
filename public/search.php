@@ -10,7 +10,7 @@ require_once("../includes/config.php");
 		if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 		}
-	$query=$_GET["query"];
+	$query=$_GET["q"];
 	$myArray=array();
 	if(ctype_digit($query)){
 		$quer1=intval($query);
