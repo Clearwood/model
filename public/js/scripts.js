@@ -25,10 +25,13 @@ $(document).ready(function () {
         }
     });
     var users= new Bloodhound({
-        datumTokenizer: Bloodhound.tokenizers.obj.whitespace("username"),
+        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
         queryTokenizer: Bloodhound.tokenizers.whitespace,
-        remote: 'https://budde.ws/search.php?query=%QUERY'
-    });
+        remote: {
+            url: 'https://budde.ws/search.php?q=%QUERY',
+            wildcard: '%QUERY'
+        }
+        });
     users.initialize();
     $('#typeahead').typeahead(
         {
@@ -38,7 +41,8 @@ $(document).ready(function () {
             minLength: 1
         },
         {
-            source: search,
+            displayKey: "full_name",
+            source: users.ttAdapter(),
             templates: {
                 empty: "no models found yet",
                 suggestion: _.template("<p id=\"sug\"><b><%- full_name %>,</b>  <a id=\"model_id_type\"> <%- id %></a></p>")
@@ -49,22 +53,6 @@ $(document).ready(function () {
     });
     $("#model").hide();
 });
-function search(query, cb) {
-    // get persons matching query (ajax)
-    var parameters = {
-        q: query
-    };
-    $.getJSON("search.php", parameters)
-        .done(function (data) {
-            // call typeahead's callback
-            cb(data);
-        })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-
-            // log error to browser's console
-            console.log(errorThrown.toString());
-        });
-}
 function detail_id(id_q) {
     // get places matching query (asynchronously)
     var parameters = {
